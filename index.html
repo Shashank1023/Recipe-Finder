@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav">
+            <h1>Recipe Finder</h1>
+            <img id="image"
+                src="https://play-lh.googleusercontent.com/hFygWSfqgqZEVLVJ8jI_XsWnqRMj2d5bQQUfd8NM9LBxfJ0LPnlu6nYsLn_7mUGaNNk=w240-h480-rw"
+                alt="">
+        </div>
+        <br>
+        <br>
+        <div id="recipeinput">
+            <input type="text" placeholder="Enter Available Ingredients (eg:- rice, potato)" id="ingre" size="60">
+            <button id="addbtn">Add</button>
+
+            <br>
+
+            <div id="ingredients-list" class="ingredients-list"></div>
+
+            <div id="filter">
+                <select name="" id="CUISINES">
+                    <option value="">ALL CUISINES</option>
+                    <option value="italian">ITALIAN</option>
+                    <option value="chinese">CHINESE</option>
+                    <option value="continental">CONTINENTAL</option>
+                    <option value="american">AMERICAN</option>
+                    <option value="indian">INDIAN</option>
+                </select>
+                <br>
+                <select name="" id="DIET">
+                    <option value="">ANY DIET</option>
+                    <option value="vegetarian">VEGETARIAN</option>
+                    <option value="vegan">VEGAN</option>
+                    <option value="gluten-free">GLUTEN-FREE</option>
+                    <option value="keto">KETO</option>
+                </select>
+                <br>
+                <select name="" id="Duration">
+                    <option value="">ANY TIME</option>
+                    <option value="15">UNDER 15 mins</option>
+                    <option value="30">UNDER 30 mins</option>
+                    <option value="60">UNDER 1 hour</option>
+                </select>
+                <br>
+                <input type="number" id="servings" placeholder="Number of servings" min="1" max="12">
+            </div>
+            <br>
+            <button type="submit" id="submitbtn">Find Recipes</button>
+
+            <div id="loading" class="loading">
+                Searching for recipes...
+            </div>
+
+            <div id="error" class="error"></div>
+
+            <div id="recipes-grid" class="recipes-grid"></div>
+        </div>
+    </div>
+
+    <div id="recipe-modal" class="recipe-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
